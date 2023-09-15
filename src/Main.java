@@ -21,7 +21,8 @@ public class Main {
 //      pattern14(n);
 //      pattern15("hello",n);
 //        pattern16(n);
-        pattern17(n);
+//        pattern17(n);
+        pattern18(n);
     }
 
     static void pattern1(int n) {
@@ -245,6 +246,36 @@ public class Main {
             for(int i=1;i<total;i++){
                 System.out.print(" "+(total-i));
             }
+            System.out.println();
+        }
+    }
+
+    static void pattern18(int n){
+        for(int row=1;row<=n;row++){
+            for(int col=1;col<=n-row+1;col++){
+                System.out.print(col);
+            }
+
+            for (int col = 1; col < 2*row-1; col++) {
+                System.out.print(" ");
+            }
+            for (int col=n-row+1;col>=1;col--){
+                System.out.print(col);
+            }
+
+            System.out.println();
+        }
+        for(int row=1;row<=n;row++){
+            for(int col=1;col<=row;col++){
+                System.out.print(col);
+            }
+            for(int i=1;i<=n-row;i++){
+                System.out.print("  ");
+            }
+            for (int col = n - row + 1; col <= n; col++) {
+                System.out.print((n-col+1));
+            }
+
             System.out.println();
         }
     }
